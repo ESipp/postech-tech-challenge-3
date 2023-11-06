@@ -19,9 +19,9 @@ with tab0:
         '''
         # Introdução
 
-        A pandemia de COVID-19, impactou drasticamente a sociedade em escala global. Este surto viral, originado em 2019, resultou em um impacto sem precedentes na saúde, na economia e na forma como as comunidades interagem e funcionam. Diversos setores foram afetados, contudo alguns com maior intesidade como saúde, economia, educação e bem-estar social.
+        A pandemia de COVID-19, impactou drasticamente a sociedade em escala global. Este surto viral, originado em 2019, resultou em um impacto sem precedentes na saúde, na economia e na forma como as comunidades interagem e funcionam. Diversos setores foram afetados, contudo alguns com maior intesidade como saúde, economia, educação e bem-estar.
 
-        Através da da análise desses dados é possível identificarm indicadores fundamentais para o planejamento de ações e estratégias em futuros surtos. Insights derivados da análise podem ajudar a direcionar políticas de saúde pública, otimizar recursos e preparar medidas mais eficazes para mitigar o impacto em casos futuros, oferecendo uma base sólida para o planejamento e resposta a potenciais emergências de saúde pública. Para isso, neste estudo, foi utilizado a base PNAD-COVID-19 do IBGE (https://covid19.ibge.gov.br/pnad-covid/), sendo esta uma base confiável para compreender não apenas os aspectos de saúde, mas também as repercussões sociais, econômicas e comportamentais desta crise. Além disso, também foi utilizada a base OpenDataSUS (https://opendatasus.saude.gov.br/) para um melhor entendimento da situação geral.
+        Através da análise de dados é possível identificar indicadores fundamentais para o planejamento de ações e estratégias em futuros surtos. Insights derivados da análise podem ajudar a direcionar políticas de saúde pública, otimizar recursos e preparar medidas mais eficazes para mitigar o impacto em casos futuros, oferecendo uma base sólida para o planejamento e resposta a potenciais emergências. Para atingir este objetivo, foi utilizado a base PNAD-COVID-19 do IBGE (https://covid19.ibge.gov.br/pnad-covid/), sendo esta uma base confiável para compreender não apenas os aspectos de saúde, mas também dados sociais, econômicos e comportamentais. Além disso, também foi utilizada a base OpenDataSUS (https://opendatasus.saude.gov.br/) para um melhor entendimento da situação geral.
 
         O período selecionado para análise foram os meses de Maio, Junho e Julho de 2020, utilizando a quebra de semana para ter uma granularidade menor e possibilitar uma melhor visão.
 
@@ -29,10 +29,10 @@ with tab0:
 with tab1: 
         '''
         # Vínculo Trabalhista vs Saúde
-
-        ## Análises e Ações Sugeridas
         Para entender um pouco mais do cenário da pandemia e a relação com vínculo trabalhista e também assuntos relacionados ao tratamento etc, seguem algumas análises.
 
+        ## Análises e Ações Sugeridas
+        
         Entre as pessoas que foram entrevistadas, qual a quantidade que trabalhou ou fez algum bico (por pelo menos uma hora) na semana passada?
         '''
 
@@ -204,7 +204,7 @@ with tab2:
 
         A adoção do trabalho remoto foi uma das estratégias em resposta à pandemia de COVID-19, buscando reduzir a disseminação do vírus e minimizar a sobrecarga nos sistemas de saúde. A transição para o trabalho remoto teve um impacto significativo na dinâmica da sociedade, alterando a forma como as pessoas interagem em ambientes profissionais e, consequentemente, afetando a propagação do vírus.
 
-        A análise do impacto do trabalho remoto na redução dos casos e óbitos de COVID-19 é fundamental para compreender como medidas como essa, voltadas para a diminuição da interação presencial, podem contribuir para a contenção de surtos. Esta análise pode fornecer insights valiosos para estratégias futuras, não apenas em potenciais novas ondas da COVID-19, mas também para outras emergências de saúde pública, demonstrando a importância de medidas não farmacêuticas na contenção de doenças altamente transmissíveis.
+        A análise do impacto do trabalho remoto na redução dos casos e óbitos de COVID-19 é fundamental para compreender como medidas como essa, voltadas para a diminuição da interação presencial, podem contribuir para a contenção de novos surtos. Esta análise pode fornecer insights valiosos para estratégias futuras, não apenas em potenciais novas ondas da COVID-19, mas também para outras emergências de saúde pública, demonstrando a importância de medidas não farmacêuticas na contenção de doenças altamente transmissíveis.
 
         ## Análises e Ações Sugeridas
 
@@ -317,6 +317,103 @@ with tab3:
         '''
         # Detalhamento Técnico
         
+        ## Perguntas vs Análises
+        Para a realização das análises, foram utilizadas as perguntas disponibilizadas no dataset do PNAD. Mais detalhes de quais perguntas foram utilizadas em cada análise podem ser conferidos logo abaixo.
+
+        #### Análise 1 - Entre as pessoas que foram entrevistadas, qual a quantidade que trabalhou ou fez algum bico (por pelo menos uma hora) na semana passada?
+        - V1012 - Semana no mês
+        - V1013 - Mês da pesquisa
+        - C001 - Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?
+
+        #### Análise 2 - Dentre esses que trabalharam ou fizeram algum bico (por pelo menos uma hora) na semana passada, quantos deles apresentaram sintomas?
+        - V1012 - Semana no mês
+        - V1013 - Mês da pesquisa
+        - C001 - Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?
+        - B0011 - Na semana passada teve febre?
+        - B0012 - Na semana passada teve tosse?
+        - B0013 - Na semana passada teve dor de garganta?
+        - B0014 - Na semana passada teve dificuldade para respirar?
+        - B0015 - Na semana passada teve dor de cabeça?
+        - B00111 - Na semana passada teve perda de cheiro ou sabor?
+        - B00112 - Na semana passada teve dor muscular?
+
+        #### Análise 3 - E desses, quais os tipos de vínculos trabalhistas mais comuns?
+        - C001 - Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?
+        - B0011 - Na semana passada teve febre?
+        - B0012 - Na semana passada teve tosse?
+        - B0013 - Na semana passada teve dor de garganta?
+        - B0014 - Na semana passada teve dificuldade para respirar?
+        - B0015 - Na semana passada teve dor de cabeça?
+        - B00111 - Na semana passada teve perda de cheiro ou sabor?
+        - B00112 - Na semana passada teve dor muscular?
+        - C007 - No trabalho (único ou principal) que tinha nessa semana, era:
+
+        #### Análise 4 - Ainda entre esses que apresentaram sintomas, quais foram os sintomas mais comuns?
+        - C001: Na semana passada, por pelo menos uma hora, trabalhou ou fez algum bico?
+        - B0011: Na semana passada teve febre?
+        - B0012: Na semana passada teve tosse?
+        - B0013: Na semana passada teve dor de garganta?
+        - B0014: Na semana passada teve dificuldade para respirar?
+        - B0015: Na semana passada teve dor de cabeça?
+        - B00111: Na semana passada teve perda de cheiro ou sabor?
+        - B00112: Na semana passada teve dor muscular?
+
+        #### Análise 5 - E qual a atitude que essas pessoas tomaram?
+        - V1012: Semana no mês
+        - V1013: Mês da pesquisa
+        - B0011: Na semana passada teve febre?
+        - B0012: Na semana passada teve tosse?
+        - B0013: Na semana passada teve dor de garganta?
+        - B0014: Na semana passada teve dificuldade para respirar?
+        - B0015: Na semana passada teve dor de cabeça?
+        - B00111: Na semana passada teve perda de cheiro ou sabor?
+        - B00112: Na semana passada teve dor muscular?
+        - B0031: Providência tomada para recuperar dos sintomas foi ficar em casa
+
+        #### Análise 6 - Caso a pessoa não tenha apenas ficado em casa, ou seja, tenha procurado ajuda médica, ela comprou e/ou tomou remédios por orientação médica?
+        - V1012: Semana no mês
+        - V1013: Mês da pesquisa
+        - B0011: Na semana passada teve febre?
+        - B0012: Na semana passada teve tosse?
+        - B0013: Na semana passada teve dor de garganta?
+        - B0014: Na semana passada teve dificuldade para respirar?
+        - B0015: Na semana passada teve dor de cabeça?
+        - B00111: Na semana passada teve perda de cheiro ou sabor?
+        - B00112: Na semana passada teve dor muscular?
+        - B0034: Providência tomada para recuperar dos sintomas foi comprar e/ou tomar remédio por orientação médica
+
+        #### Análise 7 - E das pessoas que procuraram alguma unidade de saúde e foram internadas por um dia ou mais, quantas foram sedadas, entubadas ou colocadas em respiração artificial com ventilador?
+        - V1012: Semana no mês
+        - V1013: Mês da pesquisa
+        - B002: Por causa disso, foi a algum estabelecimento de saúde?
+        - B0041: Local que buscou atendimento foi posto de saúde/Unidade básica de saúde /Equipe de Saúde da Família (médico, enfermeiro, técnico de enfermagem ou agente comunitário de saúde)
+        - B0042: Local que buscou atendimento foi pronto socorro do SUS/UPA
+        - B0043: Local que buscou atendimento foi hospital do SUS
+        - B005: Ao procurar o hospital, teve que ficar internado por um dia ou mais
+        - B006: Durante a internação, foi sedado, entubado e colocado em respiração artificial com ventilador
+
+
+        #### Análise 8 - E dessas pessoas que foram sedadas, entubadas ou colocadas em respiração artificial com ventilador, quantas possuem plano de saúde?
+        - V1012 - Semana no mês
+        - V1013 - Mês da pesquisa
+        - B002 - Por causa disso, foi a algum estabelecimento de saúde?
+        - B0041 - Local que buscou atendimento foi posto de saúde/Unidade básica de saúde /Equipe de Saúde da Família (médico, enfermeiro, técnico de enfermagem ou agente comunitário de saúde)
+        - B0042 -	Local que buscou atendimento foi pronto socorro do SUS/UPA
+        - B0043 - Local que buscou atendimento foi hospital do SUS
+        - B005 - Ao procurar o hospital, teve que ficar internado por um dia ou mais
+        - B006 - Durante a internação, foi sedado, entubado e colocado em respiração artificial com ventilador
+        - B007 - Tem algum plano de saúde médico, seja particular, de empresa ou de órgão público
+
+        #### Trabalho Remoto
+
+        Além disso, para a análise do trabalho remoto e a sua possível relação com o número de casos e óbitos, além das perguntas abaixo que estão disponíveis no dataset do PNAD, também foram utilizados dados de datasets disponibilizados pelo DataSUS:
+        - V1012 - Semana no mês
+        - V1013 - Mês da pesquisa
+        - C013 - Na semana passada, o(a) Sr(a) estava em trabalho remoto (home office ou teletrabalho)?
+        '''
+
+        
+        '''
         ## Arquitetura e Implementação
         Com o intuito de identificar os principais indicadores para o planejamento de ações e estratégias em futuros surtos, este projeto buscou estar preparado para uma arquitetura de Big Data. Embora neste momento foram analisados apenas 3 meses e utilizado apenas 2 bases de dados (PNAD e DataSUS), o projeto suporta a leitura, tratamento e análise de uma imensa quantidade de dados.
 
